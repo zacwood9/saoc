@@ -6,6 +6,7 @@
       "dependencies": {
         "@tailwindcss/cli": "^4.0.9",
         "bun-plugin-tailwind": "^0.0.14",
+        "dbmate": "^2.26.0",
         "hono": "^4.7.2",
         "tailwindcss": "^4.0.9",
       },
@@ -19,6 +20,20 @@
     },
   },
   "packages": {
+    "@dbmate/darwin-arm64": ["@dbmate/darwin-arm64@2.26.0", "", { "os": "darwin", "cpu": "arm64" }, "sha512-gcFzfK3woPs5cRqE7WhLIAppaXXPJeXtXDZsG7Dx9KjKmQrT1b+dzD3CgLTMynRCki6c2sXMlj0dw+GpOeiU7w=="],
+
+    "@dbmate/darwin-x64": ["@dbmate/darwin-x64@2.26.0", "", { "os": "darwin", "cpu": "x64" }, "sha512-sDvpo/lmmdpHk72hfrxeNxofVA0VkjzT6iAl1Va9XlsysXryHkfy2kOMKrNTaklGiY1FuiAAaEWHblQbnSIm+A=="],
+
+    "@dbmate/linux-arm": ["@dbmate/linux-arm@2.26.0", "", { "os": "linux", "cpu": "arm" }, "sha512-XomBeCo8A+hByyAuUa7sjA2e6kenFGODi3rEgNfm8Kr/pkjykRK/59djAiuJNVQRT6y/i9wy4/ZqPzWVmaEolQ=="],
+
+    "@dbmate/linux-arm64": ["@dbmate/linux-arm64@2.26.0", "", { "os": "linux", "cpu": "arm64" }, "sha512-ug8YWgGaxKW6IGHTI+CRJREVOZSd+dK16O6mLCKLeJ7NGXlajtyjTPEZOrUdJdX95/erYbIN5T2V/jKjVtH1SA=="],
+
+    "@dbmate/linux-ia32": ["@dbmate/linux-ia32@2.26.0", "", { "os": "linux", "cpu": "ia32" }, "sha512-er87GxCyiJAfwBTDaQBkVg3cnwbBiU3tpbx9bME9W+4AxAqiMfSEAnL2P6kN0zHd2BG6VpYkFEnKe66/SlGZrQ=="],
+
+    "@dbmate/linux-x64": ["@dbmate/linux-x64@2.26.0", "", { "os": "linux", "cpu": "x64" }, "sha512-VSjWBdu7zEJ8LN8yXGAexyfmdPqVsdL7AkS7MAXhOE0zHZfXZcF+H2Wlwxoas1wg1p9tx7KxjljqJzqQlEE7Fw=="],
+
+    "@dbmate/win32-x64": ["@dbmate/win32-x64@2.26.0", "", { "os": "win32", "cpu": "x64" }, "sha512-fMu2nimNX487f1jzES/YjWYZByKJ1vgnLDkDsn8vi1JJahPrVlU8axQ4OY7bUj9uT1hXnWwKsV/YyE+V1IMPvw=="],
+
     "@parcel/watcher": ["@parcel/watcher@2.5.1", "", { "dependencies": { "detect-libc": "^1.0.3", "is-glob": "^4.0.3", "micromatch": "^4.0.5", "node-addon-api": "^7.0.0" }, "optionalDependencies": { "@parcel/watcher-android-arm64": "2.5.1", "@parcel/watcher-darwin-arm64": "2.5.1", "@parcel/watcher-darwin-x64": "2.5.1", "@parcel/watcher-freebsd-x64": "2.5.1", "@parcel/watcher-linux-arm-glibc": "2.5.1", "@parcel/watcher-linux-arm-musl": "2.5.1", "@parcel/watcher-linux-arm64-glibc": "2.5.1", "@parcel/watcher-linux-arm64-musl": "2.5.1", "@parcel/watcher-linux-x64-glibc": "2.5.1", "@parcel/watcher-linux-x64-musl": "2.5.1", "@parcel/watcher-win32-arm64": "2.5.1", "@parcel/watcher-win32-ia32": "2.5.1", "@parcel/watcher-win32-x64": "2.5.1" } }, "sha512-dfUnCxiN9H4ap84DvD2ubjw+3vUNpstxa0TneY/Paat8a3R4uQZDLSvWjmznAY/DoahqTHl9V46HF/Zs3F29pg=="],
 
     "@parcel/watcher-android-arm64": ["@parcel/watcher-android-arm64@2.5.1", "", { "os": "android", "cpu": "arm64" }, "sha512-KF8+j9nNbUN8vzOFDpRMsaKBHZ/mcjEjMToVMJOhTozkDonQFFrRcfdLWn6yWKCmJKmdVxSgHiYvTCef4/qcBA=="],
@@ -86,6 +101,8 @@
     "bun-plugin-tailwind": ["bun-plugin-tailwind@0.0.14", "", { "dependencies": { "tailwindcss": "4.0.0-beta.9" }, "peerDependencies": { "typescript": "^5.0.0" } }, "sha512-Ge8M8DQsRDErCzH/uI8pYjx5vZWXxQvnwM/xMQMElxQqHieGbAopfYo/q/kllkPkRbFHiwhnHwTpRMAMJZCjug=="],
 
     "bun-types": ["bun-types@1.2.4", "", { "dependencies": { "@types/node": "*", "@types/ws": "~8.5.10" } }, "sha512-nDPymR207ZZEoWD4AavvEaa/KZe/qlrbMSchqpQwovPZCKc7pwMoENjEtHgMKaAjJhy+x6vfqSBA1QU3bJgs0Q=="],
+
+    "dbmate": ["dbmate@2.26.0", "", { "optionalDependencies": { "@dbmate/darwin-arm64": "2.26.0", "@dbmate/darwin-x64": "2.26.0", "@dbmate/linux-arm": "2.26.0", "@dbmate/linux-arm64": "2.26.0", "@dbmate/linux-ia32": "2.26.0", "@dbmate/linux-x64": "2.26.0", "@dbmate/win32-x64": "2.26.0" }, "bin": { "dbmate": "dist/cli.js" } }, "sha512-PZwU/dDm3s3bMN0Ra1SSF3i0sKUy9Ms9QnokrUZHYoKvaJyLFw2XnlTl21ivLJLbOZ/rUPzbpPddGJMzmPNt1Q=="],
 
     "detect-libc": ["detect-libc@1.0.3", "", { "bin": { "detect-libc": "./bin/detect-libc.js" } }, "sha512-pGjwhsmsp4kL2RTz08wcOlGN83otlqHeD/Z5T8GXZB+/YcpQ/dgo+lbU8ZsGxV0HIvqqxo9l7mqYwyYMD9bKDg=="],
 

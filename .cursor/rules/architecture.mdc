@@ -1,0 +1,15 @@
+---
+description: app architecture
+globs: 
+alwaysApply: true
+---
+
+# What is SAOC?
+
+This is the website for St. Athanasius Orthodox Church, a parish community in Goleta, CA.
+It is written in Bun with Hono, using server rendered HTML styled with Tailwind CSS.
+The goal is to use simple technology. For example, we're deploying on EC2 with Systemd,
+and will use SQLite and the local file system to store assets. This is just 
+a church website, we don't need to be "web scale".
+
+We use dbmate to manage database migrations. It's installed via bun, so run it as `bun dbmate ...`.
