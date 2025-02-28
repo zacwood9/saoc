@@ -113,12 +113,11 @@ export function deleteUser(id: number): boolean {
 
 // Verify user credentials
 export function verifyUser(email: string, password: string): boolean {
-  const passwordDigest = hashPassword(password);
+  const stmt = db.query("SELECT passwordDigest FROM users WHERE email = ?");
+  const user = stmt.get(email) as { passwordDigest: string } | null;
+  if (!user) {
+    return false;
+  }
 
-  const stmt = db.query(
-    "SELECT id FROM users WHERE email = ? AND passwordDigest = ?"
-  );
-  const user = stmt.get(email, passwordDigest);
-
-  return !!user;
+  return Bun.password.verifySync(password, user.passwordDigest);
 }
