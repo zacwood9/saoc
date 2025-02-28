@@ -2,9 +2,9 @@ FROM oven/bun:1.2.4
 
 WORKDIR /app
 
-COPY . .
+ADD . /app
 
 RUN bun install
 EXPOSE 3000
 
-CMD ["bun", "./index.html"]
+CMD ["bun", "run", "src/index.tsx"]
