@@ -1,0 +1,16 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+
+# Overview
+This project is a website for St. Athanasius Orthdodox Church. The website's goal is to provide visitors and parishoners with information about the parish.
+
+# Tech Stack
+- Next.js 15 with App Router
+- shadcn/ui component library
+- Tailwindcss v4 for styling. 
+- Kysely for database access. See [types.d.ts](mdc:db/types.d.ts) for database schema generated types.
+
+
